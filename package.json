@@ -8,6 +8,7 @@
     "lint": "eslint src",
     "build": "babel --source-maps --out-dir dist/ src/",
     "test": "ava",
+    "test:debug": "ava debug",
     "predebug": "npm run build",
     "debug": "node --inspect-brk dist/index.js",
     "prepare": "npm run build",

@@ -33,6 +33,10 @@ It is assumed that the main entrypoint to your library is at `src/index.js` so `
 
 The only npm script you need to actually use is `npm test`.
 
+When you need to debug, `npm run debug` will start up a paused [inspector](https://nodejs.org/en/docs/guides/debugging-getting-started/) session at `dist/index.js`. Open Chrome DevTools at `about:inspect` and connect.
+
+When you want to debug tests, run `npm run test:debug`. See additional setup instructions [here](https://github.com/avajs/ava/blob/master/docs/recipes/debugging-with-chrome-devtools.md).
+
 ## ES6 Modules
 
 Sources are compiled to CommonJS modules because trying to publish a library that uses ES modules that can be either `require`d or `import`ed safely is just too [hard and complicated](https://nodejs.org/api/packages.html#packages_dual_package_hazard). So, cjs forever 😞.
