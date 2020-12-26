@@ -1,0 +1,36 @@
+{
+  "name": "js-template",
+  "version": "1.0.0",
+  "description": "<this example description should be changed>",
+  "main": "dist/index.js",
+  "scripts": {
+    "type": "tsc",
+    "lint": "eslint src",
+    "build": "babel --source-maps --out-dir dist/ src/",
+    "test": "ava",
+    "predebug": "npm run build",
+    "debug": "node --inspect-brk dist/index.js",
+    "prepare": "npm run build",
+    "prepack": "npm run lint"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "private": true,
+  "author": "",
+  "license": "mit",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "ava": "^3.14.0",
+    "eslint": "^7.16.0",
+    "esm": "^3.2.25"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  }
+}
